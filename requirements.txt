@@ -4,6 +4,6 @@ requires.io
 pybase64
 numpy
 opencv-python
-os-sys
+os-sys==1.9.3
 tensorflow-cpu
 mtcnn
