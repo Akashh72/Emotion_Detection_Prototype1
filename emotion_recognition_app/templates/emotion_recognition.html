@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Recognition</title>
+</head>
+<body>
+    <h1>Emotion Recognition</h1>
+
+    <form action="{% url 'emotion_recognition' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Predict Emotion</button>
+    </form>
+
+    {% if detected_emotion %}
+        <p>{{ detected_emotion }}</p>
+    {% endif %}
+
+    {% if emotions_detected %}
+        <h2>Detected Emotions:</h2>
+        <img src="data:image/jpeg;base64,{{ main_image }}" alt="Detected Emotions" width="400" height="400">
+    {% endif %}
+</body>
+</html>

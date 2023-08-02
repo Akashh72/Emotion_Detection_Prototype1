@@ -1,0 +1,9 @@
+django
+Pillow
+requires.io
+pybase64
+numpy
+opencv-python
+os-sys
+tensorflow-cpu
+mtcnn
